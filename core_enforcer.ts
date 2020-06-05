@@ -12,20 +12,27 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import { compile, compileAsync } from "expression-eval";
+import { ExpressionEval } from "./deps.ts";
 
-import { DefaultEffector, Effect, Effector } from "./effect";
-import { FunctionMap, Model, newModel, PolicyOp } from "./model";
-import { Adapter, FilteredAdapter, Watcher, BatchAdapter } from "./persist";
-import { DefaultRoleManager, RoleManager } from "./rbac";
+import { DefaultEffector, Effect, Effector } from "./effect/mod.ts";
+import { FunctionMap, Model, newModel, PolicyOp } from "./model/mod.ts";
+import {
+  Adapter,
+  FilteredAdapter,
+  Watcher,
+  BatchAdapter,
+} from "./persist/mod.ts";
+import { DefaultRoleManager, RoleManager } from "./rbac/mod.ts";
 import {
   escapeAssertion,
   generateGFunction,
   getEvalValue,
   hasEval,
   replaceEval,
-} from "./util";
-import { getLogger, logPrint } from "./log";
+} from "./util/mod.ts";
+import { getLogger, logPrint } from "./logger.ts";
+
+const { compile, compileAsync } = ExpressionEval;
 
 type Matcher = ((context: object) => Promise<any>) | ((context: object) => any);
 

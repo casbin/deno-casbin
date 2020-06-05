@@ -16,11 +16,11 @@ import * as Util from "./util/mod.ts";
 
 export * from "./config.ts";
 export * from "./enforcer.ts";
-export * from "./cachedEnforcer";
-export * from "./syncedEnforcer";
-export * from "./effect";
-export * from "./model";
-export * from "./persist";
-export * from "./rbac";
-export * from "./log";
+export * from "./cached_enforcer.ts";
+export * from "./synced_enforcer.ts";
+export * from "./effect/mod.ts";
+export * from "./model/mod.ts";
+export * from "./persist/mod.ts";
+export * from "./rbac/mod.ts";
+export * from "./logger.ts";
 export { Util };
