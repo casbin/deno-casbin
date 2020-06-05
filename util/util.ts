@@ -14,6 +14,8 @@
 
 // escapeAssertion escapes the dots in the assertion,
 // because the expression evaluation doesn't support such variable names.
+const { readTextFile, writeTextFile } = Deno;
+
 export function escapeAssertion(s: string): string {
   s = s.replace(/r\./g, "r_");
   s = s.replace(/p\./g, "p_");
@@ -79,11 +81,11 @@ export function setEquals(a: string[], b: string[]): boolean {
 }
 
 export async function readFile(path: string): Promise<string> {
-  return Deno.readTextFile(path);
+  return readTextFile(path);
 }
 
 export async function writeFile(path: string, data: string): Promise<void> {
-  return Deno.writeTextFile(path, data);
+  return writeTextFile(path, data);
 }
 
 const evalReg = new RegExp(/\beval\(([^),]*)\)/g);

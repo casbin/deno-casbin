@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import { Config, ConfigInterface } from "../config";
+import { Config, ConfigInterface } from "../config.ts";
 import { Assertion } from "./assertion.ts";
 import { logPrint } from "../logger.ts";
 import { RoleManager } from "../rbac/role_manager.ts";
@@ -389,6 +389,25 @@ export class Model {
       }
     });
   }
+}
+
+/**
+ * newModel creates a model.
+ */
+export function newModel(...text: string[]): Model {
+  const m = new Model();
+
+  if (text.length === 2) {
+    if (text[0] !== "") {
+      newModelFromFile(text[0]);
+    }
+  } else if (text.length === 1) {
+    newModelFromText(text[0]);
+  } else if (text.length !== 0) {
+    throw new Error("Invalid parameters for model.");
+  }
+
+  return m;
 }
 
 /**

@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import { readFile } from "../util/util.ts";
+import { readFile } from "./util/mod.ts";
 
 // ConfigInterface defines the behavior of a Config implementation
 export interface ConfigInterface {

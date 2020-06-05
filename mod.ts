@@ -11,3 +11,16 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+
+import * as Util from "./util/mod.ts";
+
+export * from "./config.ts";
+export * from "./enforcer.ts";
+export * from "./cachedEnforcer";
+export * from "./syncedEnforcer";
+export * from "./effect";
+export * from "./model";
+export * from "./persist";
+export * from "./rbac";
+export * from "./log";
+export { Util };
