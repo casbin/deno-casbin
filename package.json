@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "bundle": "ncc build ./node_modules/casbin/lib/cjs/index.js -o node-casbin"
+  },
+  "dependencies": {
+    "casbin": "^5.0.7"
+  },
+  "devDependencies": {
+    "@zeit/ncc": "^0.22.3"
+  }
+}
