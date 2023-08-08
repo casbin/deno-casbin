@@ -54,7 +54,7 @@ module.exports =
 
 //     JavaScript Expression Parser (JSEP) 0.3.4
 //     JSEP may be freely distributed under the MIT License
-//     http://jsep.from.so/
+//     https://github.com/EricSmekens/jsep
 
 /*global module: true, exports: true, console: true */
 (function (root) {
@@ -5141,7 +5141,7 @@ const jsep = __webpack_require__(14);
 
 /**
  * Evaluation code from JSEP project, under MIT License.
- * Copyright (c) 2013 Stephen Oney, http://jsep.from.so/
+ * Copyright (c) 2013 Stephen Oney, https://github.com/EricSmekens/jsep
  */
 
 const binops = {
