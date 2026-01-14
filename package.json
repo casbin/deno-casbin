@@ -3,9 +3,9 @@
     "bundle": "ncc build ./node_modules/casbin/lib/cjs/index.js -o node-casbin"
   },
   "dependencies": {
-    "casbin": "^5.0.7"
+    "casbin": "^5.48.0"
   },
   "devDependencies": {
-    "@zeit/ncc": "^0.22.3"
+    "@vercel/ncc": "^0.38.2"
   }
 }

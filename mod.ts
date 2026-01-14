@@ -12,6 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import { createRequire } from "https://deno.land/std@0.63.0/node/module.ts";
+import { createRequire } from "https://deno.land/std@0.177.0/node/module.ts";
 
 export default { ...createRequire(import.meta.url)("./node-casbin") };
